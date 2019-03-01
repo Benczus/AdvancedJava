@@ -1,4 +1,7 @@
-Hozzon létre az autó osztállyal azonos csomagban egy Jármű osztályt. Ebből fogjuk leszármaztatni az Autó osztályt. Helyezzük át a gyártó, típus és évjárat adattagokat a Jármű osztályba. Készítsünk a Jármű osztályhoz 3 paraméteres konstruktort és módosítsuk az Autó osztály definíciójában a konstruktorokat.
+Hozzon létre az autó osztállyal azonos csomagban egy Jármű osztályt.
+Ebből fogjuk leszármaztatni az Autó osztályt.
+Helyezzük át a gyártó, típus és évjárat adattagokat a Jármű osztályba.
+Készítsünk a Jármű osztályhoz 3 paraméteres konstruktort és módosítsuk az Autó osztály definíciójában a konstruktorokat.
 A Jármű osztály metódusai:
 - az adattagokat lekérdező / beállító metódusok
 - toString: egy szövegként összefűzve adja vissza a jármű adatait

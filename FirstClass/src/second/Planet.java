@@ -24,8 +24,8 @@ public enum Planet {
     }
 
     double gravitationalWeightConstant;
-        double radius;
-        double distanceFromSun;
+    double radius;
+    double distanceFromSun;
 
     Planet(double gravitationalWeightConstant, double radius, double distanceFromSun) {
         this.gravitationalWeightConstant = gravitationalWeightConstant;

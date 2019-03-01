@@ -2,8 +2,8 @@ package first;
 
 public class Bicycle extends Vehicle {
 
-    String gearboxType;
-    int gearboxGears;
+    private String gearboxType;
+    private int gearboxGears;
 
     public Bicycle(String manufacturer, String type, int dateOfCreation, String gearboxType, int gearboxGears) {
 

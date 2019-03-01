@@ -4,15 +4,15 @@ public class Runnable {
     public static void main(String[] args) {
 
 
-        testInterface testInterface= new testInterface() {
+        testInterface test= new testInterface() {
             @Override
             public int testMethod1() {
-                return 1;
+                return 0;
             }
 
             @Override
             public double testMethod2() {
-                return 3.2;
+                return 0;
             }
 
             @Override
@@ -20,9 +20,10 @@ public class Runnable {
                 return false;
             }
         };
-        System.out.println(
-                testInterface.testMethod1());
 
+        System.out.println(
+                        test.testMethod1()
+        );
     }
 
 }

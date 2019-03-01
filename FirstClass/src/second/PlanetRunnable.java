@@ -18,6 +18,7 @@ public class PlanetRunnable {
 
 
 
+
         double calculatedWeight=Planet.MERCURY.getGravitationalWeightConstant()*weight;
 
 

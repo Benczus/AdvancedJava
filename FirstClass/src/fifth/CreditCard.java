@@ -9,9 +9,7 @@ public class CreditCard {
     private int limit;
 
 
-    private CreditCard() {
-        this.limit=100000;
-    }
+
 
     public String getOwnerName() {
         return ownerName;
@@ -37,6 +35,9 @@ public class CreditCard {
         this.balance = balance;
     }
 
+    private CreditCard() {
+        this.limit=100000;
+    }
     public boolean drawMoney(int amount){
        if (amount<limit) {
            balance -= amount;

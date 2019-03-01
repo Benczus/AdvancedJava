@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Auto extends Vehicle {
+
+
+
     /**
      * 2.1
      */

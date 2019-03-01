@@ -23,7 +23,7 @@ public class Runnable {
         System.out.println(namesList);
 
         writeInFile(namesList);
-    //  readFromFile("output.txt");
+     readFromFile("output.txt");
       namesList=readFromFileBuffered("output.txt");
         System.out.println(namesList);
 
