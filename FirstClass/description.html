@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Class</title>
+</head>
+<header><h1>
+    Első Óra
+</h1>
+</header>
+<body>
+
+
+<h2>
+    Github
+</h2>
+
+<p>
+    github repo -><br/>
+    <code>
+        $ git init <br/>
+        $ git add . <br/>
+        $ git commit -m " "<br/>
+        $ git remote add origin remote repository URL<br/>
+        $ git remote -v<br/>
+        $ git push origin master<br/>
+    </code>
+</p>
+
+ <h2>
+     Egységbezárás, Információrejtés:
+ </h2>
+<p>
+    Az egységbezárás az objektumok "érzékeny" adatainak közvetlen hozzáférése helyett fejlesztő által definiált
+    standard metódusokat használ az objektum adatainak elérésére és módosítására.
+    Az osztálydefinicióban az adatok és a metódusok közvetlenül elérik egymást.
+</p>
+<h2>
+    Öröklés:
+</h2>
+
+<p>
+    Az osztályok között hierarchia alakÍtható ki. A az ősoztályokban leírt osztálydefinició mindig absztraktabb megfogalmazást kell tartalmaznia. Az ősosztály leszármazottjai ezen osztály konkretizációját, kibővítését tartalmazzák
+    <br/>
+    A leszármazott osztály örökli az ősosztály által definiált adattagokat, és metódusokat, azonban az információrejtés során vitatott jelzők itt is életbe lépnek. A leszármazott osztály képes a metódusok felüldefiniálására.
+</p>
+<h2>
+    Polimorfizmus, többalakúság:
+</h2>
+
+<p>
+ A működést befolyásolja a környezet:
+    <ul>
+     <li>
+         <strong>Metódus felüldefiniálása (overriding)</strong>: öröklés során a leszármazott osztályban új tartalommal definiáljuk a metódust, de a metódus neve és paraméterszignatúrája megegyezik egy, az ősosztályban definiált metóduséval. Futásidejű kötéssel valósul meg (statikus, dinamikus tipus).
+     </li>
+     <li>
+         <strong>Metódus túlterhelése (overloading)</strong>: Különböző paraméterszignatúrájú, de azonos nevü függvény létezhet, amelyeket különböző működéssel rendelkezhetnek.
+     </li>
+     <li>
+         <strong>operátor kiterjesztése (operator overloading)</strong>: Operátorok működésének felüldefiniálása. Meg lehet-e valósítani?
+     </li>
+     <li>
+         <strong>Parametrikus polimorfizmus</strong>: a metódusokat típustól függetlenül, "mintaként" készítjük el a fordító számára. Fordításidejű kötéssel valósul meg. Java-ban generikus metódusok.
+     </li>
+    </ul>
+</p>
+
+<h3>
+    Fontosabb definiciók
+</h3>
+<p>
+    <ul>
+     <li>
+         <strong>Java program</strong>: A .java fileokban, csomagokba rendezett osztálydefiníciók összessége. A JRE által fordított .class file-ok a futtatható java állományok melyeket a JVM futtat.
+     </li>
+     <li>
+         <strong>Példányosítás</strong>: osztály egy objektum példányának létrehozása (helyfoglalás a memóriában).
+     </li>
+
+     <li>
+         <strong>Referencia</strong>: a példányosítás kifejezés kiértékelésének eredménye egy referencia, amely a memóriában létrejött objektumra mutató memóriacím.
+     </li>
+     <li>
+         <strong>Referencia típusai:</strong> statikus (a változó deklarációban megadott típus), dinamikus (példányosításkor megadott típus)
+     </li>
+ </ul>
+</p>
+
+ <h2>Interface</h2>
+<p>
+     Mi a különbség az absztrakt osztály és az interfész között? Lehet példányosítani? . Az absztrakt osztály absztrakt metódusait a leszármazott valósítja meg (IS_A kapcsolat: Student IS_A Person). Az interfészt más osztályok implementálják; az interfész az osztály képességét írja le (Student CAN Enrol).
+    Javaban egyszeres öröklés van, de interfészből többet is implementálhat egy osztály.
+</p>
+ <h2>Enumeration</h2>
+<p>
+    Az <code> enum </code> egy különleges adattipus, amely egy adott objektumnak megszabja a felvehető értékek körét.
+    A példány értékéül csakis az előredefiniált konstansok egyikét veheti fel.
+    Az enum csak konstansokat tartalmaz, melyeknek a Java szintaktikai leírása alapján teljesen nagybetűsnek kell lennie.
+</p>
+
+<h2>
+    Fájlkezelés
+</h2>
+<p>
+    Javaban szöveges és bináris adatállományokat lehet kezelni. A fájlkezelés lépései:
+    <ul>
+    <li>fájl objektum létrehozása,</li>
+    <li>fájl adatfolyam létrehozása a fájl objektumból,</li>
+    <li>fájlkezelő műveletek megadása,</li>
+    <li>fájl lezárása.</li>
+</ul>
+    Szöveges állomány olvasása, írása:
+    <br/>
+    <code>
+        File inputFile = new File("input.txt");<br/>
+        File outputFile = new File("output.txt");<br/>
+        FileReader in = new FileReader(inputFile);<br/>
+        FileWriter out = new FileWriter(outputFile);<br/>
+        int c;<br/>
+        while ((c = in.read()) != -1)<br/>
+        out.write(c);<br/>
+        in.close();<br/>
+        out.close();<br/>
+    </code>
+
+</p>
+<h2>
+    Private konstruktor, Singleton
+</h2>
+<p>
+    A private konstruktorral rendelkező osztály közvetlenül nem példányosítható,
+    de a private konstruktor az osztályon belüli public static metódusból hívható.
+    Miért van szükség arra, hogy egy osztály elrejtse a külvilág elől a konstruktorát,
+    majd publikus lehetőséget adjon annak meghívására?
+</p>
+ <h2>Utility Class</h2>
+<p>
+    A utility class olyan osztály, amelynek csak static vagy final adattagjai
+     és csak static nem absztrakt metódusai vannak.
+    Az ilyen osztályokat rendszerint final módosítóval látják el (nem kiterjeszthető) és private konstruktorral (hogy ne lehessen példányosítani).
+</p>
+ <h2> Import </h2>
+<p>
+     Az import deklarációval a megadott csomagban definiált osztályok használhatók a csomagnév megadása nélkül.
+    Pl. ha egy Java kódban akarom használni a LocalDate típust (a csomagnév megadása nélkül),
+    akkor a forrásfájl elején meg kell adni: import java.time.LocalDate vagy import java.time.*
+    Hasonlóan, az import static deklarációval egy osztály static tagjai használhatók az osztálynév megadása nélkül.
+    Azaz, ha a Math osztály abs() metódusát akarom használni, akkor Math.abs(-45) helyett használhatom az abs(-45) hívást, ha megadtam a kód elején az import static java.lang.Math deklarációt.
+</p>
+ <p>
+
+    Mi a különbség a pénzfelvételi limit adattag alábbi megvalósításai között?
+     <ul>
+     <li> static final adattag </li>
+     <li> nem static, final adattag </li>
+     <li> konstruktorban inicializált nem final adattag</li>
+ </ul>
+</p>
+
+<h2>
+    Tagosztályok
+</h2>
+<p>
+     A tagosztály olyan osztály, amelyet egy másik osztályon belül definiálunk. Használatának célja: egységbe zárni a szorosan összekapcsolódó osztályokat.
+</p>
+<h2> Névtelen osztályok, Lokális osztályok</h2>
+<p>
+    <strong> Lokális osztály </strong>: blokkon belül definiált osztály és hatásköre a blokk végéig terjed.
+    <strong> Névtelen osztály</strong>  egyidejűleg definiálunk és példányosítunk ugyanabban a kifejezésben. A gyakorlatban vagy interfész implementációjakor vagy örökléssel jön létre.
+</p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+Hozzon létre az autó osztállyal azonos csomagban egy Jármű osztályt. Ebből fogjuk leszármaztatni az Autó osztályt. Helyezzük át a gyártó, típus és évjárat adattagokat a Jármű osztályba. Készítsünk a Jármű osztályhoz 3 paraméteres konstruktort és módosítsuk az Autó osztály definíciójában a konstruktorokat.
+A Jármű osztály metódusai:
+- az adattagokat lekérdező / beállító metódusok
+- toString: egy szövegként összefűzve adja vissza a jármű adatait
+- absztrakt metódus, amelynek paraméterei a megtett út km-ben és az út megtételéhez szükséges idő órában, és visszaadja a jármű sebességét: sebesség = megtett út / idő
+Az Autó osztályban valósítsa meg ezt a metódust.
+Módosítsa az Autó osztály metódusait, ahol szükséges.
+
+Hozzon létre a Jármű osztállyal azonos csomagban egy Kerékpár osztályt, ami a Jármű leszármazottja. Adattagjai: váltó típusa (String), hány sebességes a kerékpár (int). Készítsen az osztályhoz 5 paraméteres konstruktort. Metódusai:
+- az adattagokat lekérdező / beállító metódusok
+- toString: egy szövegként összefűzve adja vissza a kerékpár összes adatát (az ősosztályból örökölt adatokat is)
+Ne felejtse el megvalósítani az örökölt absztrakt metódust!
+
+Készítsen a Jármű osztály alcsomagjában egy JárműTeszt futtatható osztályt. Ebben hozzon létre egy 3 elemű jármű tömböt. Töltse fel beolvasott adatokkal: olvassa be 2 autó és 1 kerékpár adatait. Az alábbi feladatokat végezze el úgy, hogy a Jármű adattagjait private / protected / default hozzáférési módosítóval lássa el.
+1. Mindhárom járműnek számítsa ki a sebességét.
+2. A kerékpárnak módosítsa a típusát.
+Mit tapasztal, mi az adattagok elérése közötti különbség a különböző hozzáférési módosítók használata esetén?
